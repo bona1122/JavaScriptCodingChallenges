@@ -1,6 +1,8 @@
 let fs = require("fs");
 let input = fs.readFileSync("./input.txt").toString().split("\n");
 
+//TODO: 다시 해보기
+
 const [N, M] = input[0].split(" ").map((el) => Number(el));
 
 const view = [
