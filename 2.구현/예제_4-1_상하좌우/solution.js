@@ -15,6 +15,7 @@ const move = {
 let start = [1, 1];
 plan.forEach((el) => {
   let point = [move[el][0] + start[0], move[el][1] + start[1]];
+  // 가능한 범위 내에 있는지 확인
   if (point[0] > 0 && point[1] > 0 && point[0] <= N && point[1] <= N)
     start = point;
 });

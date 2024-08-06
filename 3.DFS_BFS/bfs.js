@@ -19,8 +19,9 @@ const bfs = (graph, v, visited) => {
   visited[v] = true;
   queue.push(v);
 
+  // 큐가 빌 때까지 반복
   while (queue.length != 0) {
-    let shifted_item = queue.shift();
+    let shifted_item = queue.shift(); // 큐에서 꺼내고, 연결된 안가본 것들 있으면 방문 후, 큐에 넣기.
     process.stdout.write(shifted_item + " ");
     graph[shifted_item].forEach((el) => {
       if (!visited[el]) {

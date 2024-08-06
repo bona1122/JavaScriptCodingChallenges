@@ -22,10 +22,11 @@ let result = 0;
 // console.log(result);
 
 /////////////////// 방법 2
+// 일일이 1씩 빼는 게 아니라, 한번에 빼기!
 while (true) {
   // N이 K로 나뉘어지는 수가 될때까지 1 빼기
   let target = Math.floor(N / K) * K;
-  result += N - target;
+  result += N - target; // 한번에 빼고, 횟수 더하기
   N = target;
 
   // N이 K보다 작으면 반복문 탈출

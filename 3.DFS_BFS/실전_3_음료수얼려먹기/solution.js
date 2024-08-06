@@ -13,6 +13,7 @@ const connect = [
 ];
 let result = 0;
 
+// 그래프랑 현재 위치 받기
 // const dfs = (graph, row, col) => {
 //   // 방문처리 후, 각 가능한 방향에 대해 dfs 처리
 //   graph[row][col] = 1;
