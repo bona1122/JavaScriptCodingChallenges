@@ -13,11 +13,11 @@ const quick_sort = (arr, start, end) => {
   while (left <= right) {
     while (arr[left] <= arr[pivot] && left <= end) left++;
     while (arr[right] >= arr[pivot] && right > start) right--;
-    if (left > right) [arr[pivot], arr[right]] = [arr[right], arr[pivot]];
+    if (left > right) [arr[pivot], arr[right]] = [arr[right], arr[pivot]]; // 엇갈린 경우, 피벗과 작은 데이터 교체.
     else [arr[left], arr[right]] = [arr[right], arr[left]];
   }
 
-  quick_sort(arr, start, right - 1);
+  quick_sort(arr, start, right - 1); // 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행.
   quick_sort(arr, right + 1, end);
 };
 
@@ -30,7 +30,7 @@ const quick_sort_with_filter = (arr) => {
   if (arr.length <= 1) return arr;
 
   let pivot = arr[0];
-  let remain = arr.slice(1);
+  let remain = arr.slice(1); // 피벗을 제외한 리스트
 
   let left_side = remain.filter((item) => item <= pivot);
   let right_side = remain.filter((item) => item > pivot);
@@ -42,4 +42,3 @@ const quick_sort_with_filter = (arr) => {
   ];
 };
 console.log(quick_sort_with_filter(arr));
-

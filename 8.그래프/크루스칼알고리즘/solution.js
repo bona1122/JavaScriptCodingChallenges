@@ -47,3 +47,14 @@ edges.forEach((edge) => {
 });
 
 console.log(result);
+
+function isPrime(n){
+  if(n < 2) return false; // 2보다 작은거 쳐내기
+  if(n === 2) return true; // 2쳐내기
+  if(n % 2 === 0) return false; //짝수쳐내기
+
+  for(let i = 3; i <= Math.sqrt(n); i +=2){
+    if(n % i === 0) return false;
+  }
+  return true;
+}

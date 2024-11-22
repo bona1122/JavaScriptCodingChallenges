@@ -43,3 +43,14 @@ const topologySort = () => {
 };
 
 topologySort();
+
+var obj = {
+  logThis: function () {
+    console.log(this);
+  },
+  logThisLater: function () {
+    setTimeout(this.logThis, 500);
+  },
+};
+
+obj.logThisLater();
