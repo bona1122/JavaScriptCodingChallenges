@@ -7,14 +7,14 @@ const filePath =
 let input = fs.readFileSync(filePath).toString().trim().split("\n");
 const log = console.log;
 
-// 치킨집 중, m개를 고르고, 도시의 치킨 거리 최솟값 구하기
+// 치킨집 중, m개를 고르고(조합), 도시의 치킨 거리 최솟값 구하기
 const [n, m] = input[0].split(" ").map(Number);
 const graph = new Array(n);
 for (let i = 0; i < n; i++) {
   graph[i] = input[i + 1].split(" ").map(Number);
 }
-let chickens = [];
-let houses = [];
+let chickens = []; // 전체 치킨집 위치 저장
+let houses = []; // 전체 집 위치 저장
 let visited = Array(chickens.length).fill(false);
 let answer = Infinity;
 
