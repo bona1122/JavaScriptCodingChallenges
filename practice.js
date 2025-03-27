@@ -1,4 +1,4 @@
-// 최소힙
+// 1. 최소힙
 class MinHeap {
   constructor(compare = (a, b) => a[0] - b[0]) {
     this.heap = []
@@ -69,7 +69,7 @@ class MinHeap {
   }
 }
 
-// union, find => 무향그래프의 경우에 사이클 판별에 쓰일 수 있음. (+) 방향그래프 사이클은 dfs로 판별가능
+// 2. union, find => 무향그래프의 경우에 사이클 판별에 쓰일 수 있음. (+) 방향그래프 사이클은 dfs로 판별가능
 const findParent = (parent, x) => {
   if (parent[x] !== x) {
     parent[x] = findParent(parent, parent[x])
@@ -87,7 +87,7 @@ const unionParent = (parent, a, b) => {
   }
 }
 
-// 이진탐색, 상한선/하한선
+// 3. 이진탐색, 상한선/하한선
 const binarySearch = (arr, target) => {
   let start = 0
   let end = arr.length - 1
@@ -130,3 +130,32 @@ const upper = (arr, target) => {
   }
   return end
 }
+
+class Queue {
+  constructor() {
+    this.items = {}
+    this.front = 0
+    this.rear = 0
+  }
+
+  enqueue(item) {
+    this.items[this.rear++] = item
+  }
+
+  dequeue() {
+    if (this.isEmpty()) return null
+    const item = this.items[this.front]
+    delete this.items[this.front]
+    this.front++
+    return item
+  }
+
+  isEmpty() {
+    return this.front === this.rear
+  }
+
+  size() {
+    return this.rear - this.front
+  }
+}
+
