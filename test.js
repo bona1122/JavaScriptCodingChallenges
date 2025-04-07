@@ -1,4 +1,4 @@
-class MidHeap {
+class MinHeap {
   constructor(f = (a, b) => a - b) {
     this.heap = []
     this.compare = f

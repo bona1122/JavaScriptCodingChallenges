@@ -77,7 +77,7 @@ class MinHeap {
       now = parent
     }
   }
-  // 일단 루트 빼고, 마지막거 위로 채운후 내려가기
+  // 일단 루트 빼고, 마지막거 위로 채운 후 내려가기
   pop() {
     if (this.heap.length === 0) return null
     if (this.heap.length === 1) return this.heap.pop()
@@ -118,4 +118,3 @@ class MinHeap {
 }
 
 const arr = [3, 5, 4, 1, 6]
-
