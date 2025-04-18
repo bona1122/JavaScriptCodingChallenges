@@ -28,7 +28,8 @@ int main(){
       cout << stoimap[s] << "\n";
     }else{
       // TODO: atoi 문지열을 숫자로 변환
-      // TODO: string.c_str(): string을 문자(char)배열로 만들기 위해 씀 -> atoi에 쓰기 위해
+      // TODO: string.c_str(): string을 문자(char)배열로 만들기 위해 씀 -> atoi에 쓰기 위해. 숫자로변환되면 숫자로, 숫자로 변환안되면
+      // 0 반환 => 따라서, "0"은 따로 처리 필요
       cout << itosmap[atoi(s.c_str())] << "\n";
     }
   }
