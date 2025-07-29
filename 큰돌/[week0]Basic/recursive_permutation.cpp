@@ -11,13 +11,13 @@ void print(){
   cout << '\n';
 }
 void makePermutation(int n, int r, int depth) {
-  if(r == depth){
+  if(r == depth){ // n개중 r개를 순서 있게.
     print();
     return;
   }
   for(int i = depth; i < n; i++){
     cout << i << " : " << depth << "를 바꾼다.\n";
-    swap(a[i], a[depth]);
+    swap(a[i], a[depth]); 
     makePermutation(n, r, depth + 1);
     cout << i << " : " << depth << "를 다시 바꾼다.\n";
     swap(a[i], a[depth]);
