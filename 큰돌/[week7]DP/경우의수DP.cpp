@@ -3,7 +3,7 @@ using namespace std;
 
 // 숫자를 1,2,3의 합으로 나타내는 방법 수 구하기
 // TODO: 경우의 수는 "더하는 것"
-typedef long long ll; //TODO: 경우의 수는 큰수가 나올 수 있으므로 long long
+typedef long long ll; // 경우의 수는 큰수가 나올 수 있으므로 long long
 ll t, n, dp[10001];
 int main(){
   ios::sync_with_stdio(false);

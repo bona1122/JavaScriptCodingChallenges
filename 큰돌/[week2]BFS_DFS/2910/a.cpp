@@ -8,9 +8,9 @@ vector<pair<int, int>> v;
 map<int, int> mp, mp_first; 
 
 // c보다 작은요소로 이루어진 n개의 수열, 자주 등장하는 빈도수로 정렬 -> 빈도정렬
-// TODO: custom 정렬 필요한 문제 => sort에 넘겨주는 compare 함수 정의
+// custom 정렬 필요한 문제 => sort에 넘겨주는 compare 함수 정의
 // TODO: map은 자동으로 숫자 키면 0할당, 문자키면 빈문자열로 자동 할당 => 맵요소 있는지 확인 가능 -> 교안 참조
-
+// TODO: map에 접근만해도 자동 할당. 자동할당없이 확인하려면 myMap.find(5) != myMap.end() or myMap.count(key) > 0
 bool cmp(pair<int,int> a, pair<int, int> b){
 	if(a.first == b.first){ // 빈도 같으면 먼저 등장한것이 앞에 오도록 -> 이걸 위해 등장시점 기록
 		return mp_first[a.second] < mp_first[b.second]; // a가 작으면, a먼저

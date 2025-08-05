@@ -3,7 +3,7 @@ using namespace std;
 
 // TODO: trace까지 들어간 문제. BFS+Trace 
 // 경로추적 -> prev[next] = here;
-#define prev aaa // TODO:prev, next는 예약어
+#define prev aaa // TODO: prev, next는 예약어
 #define next aaaa
 const int max_n = 200001;
 int visited[max_n], prev[max_n], n, k, ret, here, cnt, next;
@@ -26,7 +26,7 @@ int main(){
       q.push(next);
     }
   }
-  for(int i = k; i != n; i = prev[i]){ //TODO: prev trace + 처음위치 담기
+  for(int i = k; i != n; i = prev[i]){ //TODO: prev trace + 처음 위치 담기
     v.push_back(i);
   }
   v.push_back(n); // 시작점 넣어주기

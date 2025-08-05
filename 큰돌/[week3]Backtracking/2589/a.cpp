@@ -7,7 +7,7 @@ int dx[4] = {0, 1, 0, -1};
 char a[50][50];
 string s;
 void bfs(int y, int x){
-  memset(visited, 0, sizeof(visited)); // TODO: memset 초기화
+  memset(visited, 0, sizeof(visited)); // TODO: memset 초기화. 0, -1 둘 중에 하나만 가능
   visited[y][x] = 1;
   queue<pair<int,int>> q;
   q.push({y, x});

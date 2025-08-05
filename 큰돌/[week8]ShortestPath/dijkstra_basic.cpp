@@ -13,7 +13,7 @@ void dijkstra(int start){
   // TODO: 최소값이 가장 상단에 있는 우선순위 큐 만들기 -> min heap
   // 저장될 데이터 타입, 큐의 내부 컨테이너로 벡터 사용, 우선순위를 결정하는 비교 함수(greater는 작은 값이 높은 우선순위를 갖도록 한다.)
   // {거리, 정점} 담을 것이고, 최소가 위에 오기위해 greater
-  // +) priority_queue은 기본으로 최대힙 (큰값이 우선)
+  // +) priority_queue은 기본으로 최대힙(큰값이 우선)
   priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
   // 시작점 처리 아래 2줄
   dist[start] = 0;

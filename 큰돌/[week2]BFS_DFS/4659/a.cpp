@@ -12,10 +12,10 @@ bool isVowel(int idx){
 int main(){
   while(true){
     cin >> s;
-    if(s == "end") break; // TODO: 쌍따옴표. 문자열비교방식 js랑 동일, 
+    if(s == "end") break; 
     lcnt = vcnt = 0;
     bool flag = 0;
-    bool is_include_v = 0; // 모음 포함여부
+    bool is_include_v = 0; // 모음 포함 여부
     int prev = -1; // TODO: prev 활용
     for(int i = 0; i < s.size(); i++){ // 문자열 순회
       int idx = s[i]; // 알파벳의 아스키코드

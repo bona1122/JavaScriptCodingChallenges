@@ -12,8 +12,12 @@ int main(){
   scanf("%d %d", &n, &m);
   for(int i = 0; i < n; i++){
     for(int j = 0; j < m; j++){
-      scanf("%1d", &a[i][j]); //TODO: 붙어있는 숫자 하나하나 받기
+      scanf("%1d", &a[i][j]); // 붙어있는 숫자 하나씩 받기
     }
+    // cin >> s;
+    // for(int j = 0; j < m; j++){
+    //   a[i][j] = s[j] - '0'; // 문자를 숫자로 변환. 아스키코드 이용
+    // }
   }
 
   queue<pair<int, int>> q; //y, x 담을 큐

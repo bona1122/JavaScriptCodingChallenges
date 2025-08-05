@@ -9,7 +9,7 @@ string s;
 char a[101][101];
 
 string quard(int y, int x, int size){
-  if(size == 1) return string(1, a[y][x]); //TODO: char을 string으로 만들어줌. 반복숫자와함께 문자 넘겨주기
+  if(size == 1) return string(1, a[y][x]); // char을 string으로 만들어줌. 반복숫자와함께 문자 넘겨주기
   char b = a[y][x]; // 모두 1 또는 0 인지 확인 위한 기준점
   string ret = "";
   for(int i = y; i < y + size; i++){
@@ -31,7 +31,7 @@ string quard(int y, int x, int size){
 int main(){
   cin >> n;
   for(int i = 0; i < n; i++){
-    cin >> s; // TODO: 붙어있는것 한줄씩 받기 string
+    cin >> s;
     for(int j = 0; j < n; j++){
       a[i][j] = s[j];
     }

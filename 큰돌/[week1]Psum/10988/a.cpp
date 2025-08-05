@@ -16,8 +16,8 @@ int main(){
   */
 
   cin >> str;
-  temp = str; // TODO: string에 대입연산자 쓰면, 주소복사 아닌 값복사 일어남(깊은 복사)
-  reverse(str.begin(), str.end()); // TODO: reverse는 문자열 자체를 바꿈
+  temp = str; // string에 대입연산자 쓰면, 주소복사 아닌 값복사 일어남(깊은 복사)
+  reverse(str.begin(), str.end()); // reverse는 문자열 자체를 바꿈
 
   temp == str ? cout << 1 : cout << 0;
   return 0;

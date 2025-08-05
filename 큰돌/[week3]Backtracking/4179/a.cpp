@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int INF = 987654321; // TODO: 최댓값 정의
+const int INF = 987654321;
 // 불에 타기전 탈출 여부, 빨리 탈출하는 시간 
 // TODO: 불의 최단거리와 영훈의 최단거리 비교하는 문제
 // 불위치 찾고(큐에 모으기) bfs돌리고, 영훈 위치찾고 bfs돌리고, 테두리 .인것들 확인

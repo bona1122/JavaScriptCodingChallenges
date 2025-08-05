@@ -15,7 +15,7 @@ int main(){
   }
 
   for(int i = 0; i < 26; i++){
-    if(cnt[i] >= 5) ret += i + 'a'; //TODO: 문자열과 연산 시, 자동으로 문자로 변환
+    if(cnt[i] >= 5) ret += i + 'a'; // 문자열과 연산 시, 자동으로 문자로 변환
   }
   ret.size() ? cout << ret : cout << "PREDAJA";
   return 0;

@@ -1,9 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// TODO: 최대로 증가하는 부분 수열
-// cnt[i]: i번쨰 요소를 포함하는 최대증가부분수열 길이
-// trace까지 하려면 prev_list 활용. 배열인덱스를 담기 위해 -1로 초기화 해줌(0안됨)
+// TODO: 최대로 증가하는 부분 수열, cnt[i]: i번쨰 요소를 포함하는 최대증가부분수열 길이
+// trace까지 하려면 prev_list 활용. "배열인덱스를 담기 위해 -1로 초기화 해줌(0안됨)"
 int n, a[1001], cnt[1001], ret, prev_list[1001], idx;
 vector<int> v;
 void go(int idx){
@@ -23,10 +22,10 @@ int main1(){ // O(n^2)
     scanf("%d", a + i);
   }
   fill(prev_list, prev_list + 1001, -1);
-  fill(cnt, cnt + 1001, 1);
+  fill(cnt, cnt + 1001, 1); // cnt[i] 는 i번째요소포함하는 최장길이부분수열이므로 1로 초기화
   for(int i = 0; i < n; i++){
-    for(int j = 0; j < i; j++){ // 이전요소들 보면서
-      if(a[j] < a[i] && cnt[i] < cnt[j] + 1) {
+    for(int j = 0; j < i; j++){ // 이전요소들 보면서 "요소값, cnt값" 확인 
+      if(a[j] < a[i] && cnt[i] < cnt[j] + 1) { 
         cnt[i] = cnt[j] + 1;
         prev_list[i] = j; // TODO: trace 
         if(ret < cnt[i]){
@@ -50,10 +49,12 @@ int main2(){ // O(nlogn) -> 이방법은 원본배열훼손으로인해 trace는
   scanf("%d", &n);
   for(int i = 0; i < n; i++){
     scanf("%d", &num);
+
     // TODO: 아래 3줄 핵심
-    auto lowerPos = lower_bound(lis, lis + len, num); // TODO: 크거나 같은 값(이상) 찾음
+    auto lowerPos = lower_bound(lis, lis + len, num); // 크거나 같은 값(이상) 찾음
     if(*lowerPos == 0) len++; // 해당위치에 아무것도 없다면 len증가,삽입
     *lowerPos = num; // 해당위치에 삽입(교체)
+
     cout << *lowerPos << '\n';
   }
 }

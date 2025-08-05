@@ -3,7 +3,7 @@ using namespace std;
 
 // 누적합 구하고 연속적인 K일의 온도 합이 최대가 되는 값 출력
 int N, K;
-int num, ret = -10000000; //TODO: ret에만 값 들어감
+int num, ret = -10000000;
 int psum[100001];
 int main(){
   cin >> N >> K;

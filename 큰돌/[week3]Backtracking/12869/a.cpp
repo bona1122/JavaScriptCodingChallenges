@@ -4,7 +4,7 @@ using namespace std;
 // TODO: 가중치가 같은 그래프, 최단거리 떠올리기
 // 체력은 60보다 작거나 같은 자연수
 // 9,3,1
-int dp[61][61][61], a[3], n, visited[61][61][61]; // TODO: 전역변수로 배열 선언하면 자동으로 0으로 요소가 초기화 됨.
+int dp[61][61][61], a[3], n, visited[61][61][61]; // 전역변수로 배열 선언하면 자동으로 0으로 요소가 초기화 됨.
 int _a[6][3] = {
   {9, 3, 1},
   {9, 1, 3},
@@ -16,7 +16,7 @@ int _a[6][3] = {
 struct A{ // TODO: struct. 3개변수 담기위해 tuple은 사용하기 번거로움
   int a, b, c;
 };
-queue<A> q;
+queue<A> q; // 3개요소를 담는 큐
 int bfs(int a, int b, int c){
   visited[a][b][c] = 1;
   q.push({a, b, c});

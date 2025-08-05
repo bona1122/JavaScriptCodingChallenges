@@ -12,10 +12,10 @@ int go(int sec, int tree, int canMove){
   if (canMove < 0) return -1e9; // 엄청 큰 음수를 넣어서 해당 경우 제외시키기
   if (sec == n) return 0; // TODO: 2. 기저사례
 
-  int &ret = dp[sec][tree][canMove]; //TODO: 3. 메모이제이션 두줄. (참조 변수를 선언할 때 &, 네, 정확합니다. C++에서 참조(&)로 값을 받으면 원본 변수를 직접 변경할 수 있다.)
+  int &ret = dp[sec][tree][canMove]; //TODO: 3. 메모이제이션 두줄(참조(&)로 값을 받으면(참조변수) 원본 변수를 직접 변경할 수 있다.)
   if(ret != -1) return ret; // 이미 계산된 값이면 반환
 
-  // 현재 나무 머무르거나 다른나무로 이동하는 것 중 최대 값 선택 + 현재초에 해당트리에 사과가떨어지는지
+  // TODO: 4. 로직. 현재나무 머무르거나 다른나무로 이동하는 것 중 최대 값 선택 + 현재초에 해당트리에 사과가떨어지는지
   return ret = max(go(sec + 1, tree ^ 1, canMove - 1), go(sec + 1, tree,
     canMove)) + (tree == b[sec] - 1);
 }

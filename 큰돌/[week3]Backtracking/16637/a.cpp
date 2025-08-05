@@ -10,7 +10,7 @@ string s;
 void fastIO(){ // TODO: 입출력 속도 향상 
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); 
-  cout.tie(NULL);   
+  cout.tie(NULL);
 } 
 int op(char a, int b, int c){
   if(a == '+') return b + c; 

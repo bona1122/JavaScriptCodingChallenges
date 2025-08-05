@@ -12,7 +12,6 @@ string s;
 map<string, int> stoimap;
 map<int, string> itosmap;
 int main(){
-  // TODO: 입출력 속도 개선 -> 아래두줄
   ios_base::sync_with_stdio(false);
 	cin.tie(NULL); cout.tie(NULL);
   cin >> N >> M;
@@ -27,9 +26,9 @@ int main(){
     if(atoi(s.c_str()) == 0){
       cout << stoimap[s] << "\n";
     }else{
-      // TODO: atoi 문지열을 숫자로 변환
-      // TODO: string.c_str(): string을 문자(char)배열로 만들기 위해 씀 -> atoi에 쓰기 위해. 숫자로변환되면 숫자로, 숫자로 변환안되면
-      // 0 반환 => 따라서, "0"은 따로 처리 필요
+      // TODO: atoi 문자열을 숫자로 변환
+      // TODO: string.c_str(): string을 문자(char)배열로 만들기 위해 씀 -> atoi에 쓰기 위해. 
+      // 숫자로 변환되면 숫자로, 숫자로 변환안되면 0 반환 => 따라서, "0"은 따로 처리 필요
       cout << itosmap[atoi(s.c_str())] << "\n";
     }
   }

@@ -3,7 +3,6 @@ using namespace std;
 
 // Binary Search: "정렬"된 배열에서 탐색범위 반으로 줄이며 탐색
 // -> 크기 큰 배열에서 특정 값 찾을 때 사용, 최적화 문제(최소화/최대화)에를 결정문제로 만드는데에도 쓰임
-// TODO: 함수 확인
 // TODO: upper_bound(v.begin(), v.end(), x)는 "x보다 큰" 첫 번째 요소의 위치를 반환합니다.
 // TODO: lower_bound(v.begin(), v.end(), x)는 "x 이상"인 첫 번째 요소의 위치를 반환합니다.
 int binarySearch(const vector<int>& arr, int target){
@@ -11,7 +10,7 @@ int binarySearch(const vector<int>& arr, int target){
   int end = arr.size() - 1;
   while(start <= end){
     // int mid = (start + end) / 2;
-    int mid = start + (end - start) / 2; // TODO: 위의 주석된 코드는 오버플로우가 발생할 위험 있어서 이렇게 씀
+    int mid = start + (end - start) / 2; // 위의 주석된 코드는 오버플로우가 발생할 위험 있어서 이렇게 씀
     if(arr[mid] == target) {
       return mid;
     }else if(arr[mid] < target) start = mid + 1;

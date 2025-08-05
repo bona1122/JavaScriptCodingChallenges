@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+
 using namespace std;
 
 // 순서바꿔서 팰린드롬 만들기
@@ -13,8 +14,8 @@ int main(){
   for(char a : s) cnt[a]++;
   for(int i = 'Z'; i >= 'A'; i--){
     if(cnt[i]){
-      if(cnt[i] & 1){ // TODO: 홀수 체크 로직
-        mid = char(i);
+      if(cnt[i] & 1){ // 홀수 체크 로직
+        mid = char(i); // TODO: 정수를 문자로 변환
         flag++;
         cnt[i]--;
       }
@@ -24,7 +25,7 @@ int main(){
       }
     }
   }
-  if(mid) ret.insert(ret.begin() + ret.size()  / 2, mid); // TODO: 중앙에 삽입
+  if(mid) ret.insert(ret.begin() + ret.size()  / 2, mid); // TODO: 중앙에 삽입, string.insert(위치, 값)
   if(flag == 2) cout << "I'm Sorry Hansoo";
   else cout << ret <<"\n";
   return 0;

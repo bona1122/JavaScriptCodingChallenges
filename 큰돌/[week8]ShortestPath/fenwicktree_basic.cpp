@@ -7,7 +7,7 @@ using namespace std;
 int n;
 vector<int> tree;
 
-void update(int idx, int val){ // TODO: 확인. 파란노드 만드는 것
+void update(int idx, int val){ // TODO: 확인. 파란노드 만드는 것. idx부터 계속 최하위비트 더해서 증가시킴
   while(idx < tree.size()){ 
     tree[idx] += val; 
     idx += idx & -idx; // 최하위 켜진 비트 더하기
@@ -15,7 +15,7 @@ void update(int idx, int val){ // TODO: 확인. 파란노드 만드는 것
 }
 int sum(int idx){ // 파란노드 끄집어 내기
   int ret = 0;
-  while(idx > 0){ 
+  while(idx > 0){ // idx부터 계속 감소해나감
     ret += tree[idx]; // 파란노드 더하기
     idx -= idx & -idx; // 최하위 켜진 비트 뺴기
   }
@@ -27,7 +27,7 @@ int rangeQuery(int left, int right){ // psum과 유사
 int main(){
   vector<int> data = {3,4,10,11};
   n = data.size();
-  tree.resize(n+1, 0); // 배열기반으로 트리 만들기
+  tree.resize(n+1, 0); //tree 벡터의 크기 조정 + 0으로 초기화
 
   // 초기 배열을 기반으로 트리 구성
   // 트리의 인덱스는 1부터

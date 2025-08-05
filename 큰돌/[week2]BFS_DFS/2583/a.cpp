@@ -42,7 +42,7 @@ int main(){
     }
   }
 
-  sort(ret.begin(), ret.end()); // TODO: 오름차순 정렬
+  sort(ret.begin(), ret.end());
   cout << ret.size() << '\n';
   for(int a : ret) cout << a << ' ';
   return 0;

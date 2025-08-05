@@ -32,8 +32,6 @@ int main(){
     }
   }
    */
-
-  // TODO: 방법2: 재귀
   vector<int> v;
   combi(-1, v);
   cout << ret;

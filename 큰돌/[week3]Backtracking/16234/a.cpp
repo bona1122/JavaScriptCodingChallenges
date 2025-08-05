@@ -28,7 +28,7 @@ int main(){
   }
   while(true){
     bool flag = 0;
-    fill(&visited[0][0], &visited[0][0] + 50*50,0); //TODO: fill쓰기
+    fill(&visited[0][0], &visited[0][0] + 50*50,0); // TODO: fill(처음 요소 주소, 처음 요소 주소+총요소갯수, 초기화값)
     for(int i = 0; i < n; i++){
       for(int j = 0; j < n; j++){
         if(!visited[i][j]){
